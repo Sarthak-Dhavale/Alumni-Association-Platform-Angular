@@ -1,0 +1,128 @@
+<div class="register-container">
+    <h2>Alumni Registration Form</h2>
+
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+        <h3>Personal Details</h3>
+        <div class="form-group">
+            <label>Full Name*</label>
+            <input pInputText type="text" formControlName="fullName" placeholder="Enter your full name" />
+        </div>
+
+        <div class="form-group">
+            <label>Date of Birth*</label>
+            <p-calendar formControlName="dateOfBirth" dateFormat="mm/dd/yyyy"></p-calendar>
+        </div>
+
+        <div class="form-group">
+            <label>Gender*</label>
+            <p-dropdown [options]="genderOptions" formControlName="gender" placeholder="Select Gender"></p-dropdown>
+        </div>
+
+        <div class="form-group">
+            <label>Address*</label>
+            <input pInputText type="text" formControlName="address" placeholder="Enter your address" />
+        </div>
+
+        <div class="form-group">
+            <label>Profile Picture:</label>
+            <p-fileUpload name="profilePicture" mode="basic" accept="image/*" formControlName="profilePicture" [auto]="true" [maxFileSize]="1000000" chooseLabel="Upload"></p-fileUpload>
+        </div>
+
+        <h3>Contact Details</h3>
+        <div class="form-group">
+            <label>Eamil*</label>
+            <input pInputText type="email" formControlName="email" placeholder="Enter your email" />
+        </div>
+
+        <div class="form-group">
+            <label>Phone Number*</label>
+            <input pInputText type="number" formControlName="mobileNo" placeholder="Enter your mobile number" /> 
+        </div>
+
+        <div class="form-group">
+            <label>LinkedIn Profile</label>
+            <input pInputText type="text" formControlName="linkedInProfile" placeholder="LindeIn Profile" />
+        </div>
+
+        <div class="form-group">
+            <label>Github Profile</label>
+            <input pInputText type="text" formControlName="githubProfile" placeholder="Github Profile" />
+        </div>
+
+        <h3>Educational Details</h3>
+        <div class="form-group">
+            <label>PRN Number*</label>
+            <input pInputText type="text" formControlName="prnNumber" placeholder="Enter your PRN number" />
+        </div>
+
+        <div class="form-group">
+            <label>UnderGraduate Degree*</label>
+            <input pInpuText type="text" formControlName="underGraduateDegree" placeholder="Enter your UnderGraduate Degree" />
+        </div>
+
+        <div class="form-group">
+            <label>Undergraduate Institute*</label>
+            <input pInputText type="text" formControlName="underGraduateInstitute" placeholder="Enter your Undergraduate Institute" />
+        </div>
+
+        <div class="form-group">
+            <label>UnderGraduate Graduation Year</label>
+            <input pInputText type="text" formControlName="underGraduateGraduationYear" placeholder="Enter your UnderGraduate Graduation Year" />
+        </div>
+
+        <div class="form-group">
+            <label>PostGraduate Degree</label>
+            <input pInpuText type="text" formControlName="postGraduateDegree" placeholder="Enter your PostGraduate Degree" />
+        </div>
+
+        <div class="form-group">
+            <label>PostGraduate Institute</label>
+            <input pInputText type="text" formControlName="postGraduateInstitute" placeholder="Enter your Postgraduate Institute" />
+        </div>
+
+        <div class="form-group">
+            <label>PostGraduate Graduation Year</label>
+            <input pInputText type="text" formControlName="PostGraduateGraduationYear" placeholder="Enter your PostGraduate Graduation Year" />
+        </div>
+
+        <div class="form-group">
+            <label>Department*</label>
+            <p-dropdown [options]="departmentOptions" formControlName="department" placeholder="Select Department"></p-dropdown>
+        </div>
+
+        <h3>Company Details</h3>
+        <div class="form-group">
+            <label>Company Name*</label>
+            <input pInputText formControlName="companyName" placeholder="Enter Company Name"/>
+        </div>
+
+        <div class="form-group">
+            <label>Years of Experience*</label>
+            <input pInputText formControlName="experience" placeholder="Enter Your Experience"/>
+        </div>
+
+        <div class="form-group">
+            <label>Position*</label>
+            <input pInputText formControlName="position" placeholder="Enter your Posiion"/>
+        </div>
+
+        <div class="form-group">
+           <label>Skills*</label>
+           <input pInputText formControlName="skills" placeholder="Eg., Pyhton, Java, Management"/>
+        </div>
+
+        <h3>Other Information</h3>
+        <div class="form-group">
+            <label>Emergency Contact</label>
+            <input pInputText formControlName="emergencyContact" />
+        </div>
+
+        <div class="form-group">
+            <label>Job Profile*</label>
+            <p-dropdown [options]="jobProfileOptions" formControlName="jobProfile" placeholder="Select Job Profile"></p-dropdown>
+        </div>
+
+        <button pButton label="Register" class="btn-register" type="submit"></button>
+
+    </form>
+</div>

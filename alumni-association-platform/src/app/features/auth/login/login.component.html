@@ -1,0 +1,19 @@
+<div class="login-page">
+    <div class="login-container">
+        <h2>TKIET Alumni Platform</h2>
+        <p>Please login to your account</p>
+        <div class="form-group">
+            <input pInputText type="email" id="email" [(ngModel)]="email" placeholder="Email"/>
+        </div>
+
+        <div class="form-group">
+            <input pPassword id="password" [(ngModel)]="password" toggleMask="true" placeholder="Password"/>
+        </div>
+
+        <button pButton label="Login" class="btn-login"></button>
+
+        <p class="register-link">Don't have an account
+            <a routerLink="/registration">Register here</a>
+        </p>
+    </div>
+</div>
